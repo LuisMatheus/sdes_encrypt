@@ -5,7 +5,7 @@ sdesData* SDES::encrypt(string message)
 	sdesData* data = new sdesData();
 
 	//chave aleatoria
-	//srand(time(NULL));
+	srand(time(NULL));
 	data->key = new bitset<10>(rand() % 1024);
 
 	vector<bitset<8>> keys = getKeys(*data->key);
